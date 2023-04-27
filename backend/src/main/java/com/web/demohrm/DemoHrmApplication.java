@@ -1,0 +1,13 @@
+package com.web.demohrm;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class DemoHrmApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(DemoHrmApplication.class, args);
+    }
+
+}
