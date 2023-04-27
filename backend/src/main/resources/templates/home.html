@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html xmlns=http://www.w3.org/1999/xhtml
-			xmlns:th="http://www.thymeleaf.org">
-	<head>
-		<title>HomePage</title>
-   </head>
-	<body>
-        <h1>Welcome to...</h1>
-	</body>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" th:href="@{https://www.w3schools.com/w3css/4/w3.css}">
+	<title>Manage Employee</title>
+</head>
+<body>
+<div><h1>List Employee</h1>
+</div>
+<div class="w3-container" id="content">
+	<table class="w3-table w3-striped w3-bordered">
+		<tr>
+			<th>UserName</th>
+			<th>Password</th>
+		</tr>
+		<tr th:each="u : ${listUser}">
+			<td th:text="*{u.username}"></td>
+			<td th:text="*{u.password}"></td>
+		</tr>
+	</table>
+</div>
+</body>
 </html>
